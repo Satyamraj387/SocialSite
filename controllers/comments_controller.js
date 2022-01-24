@@ -24,3 +24,21 @@ module.exports.create = (req,res)=>{
         }
     });
 };
+module.exports.destroy = (req,res)=>{
+    Comment.findById(req.params.id, (err,comment)=>{
+        Post.findById(comment.post,(err,post)=>{
+           
+     
+        if(comment.user == req.user.id || req.user.id== post.user){
+            let postId= comment.post;
+            comment.remove();
+            Post.findByIdAndUpdate(postId, { $pull: { comments: req.params.id}},(err,post)=>{
+                return res.redirect('back');
+            });
+        }
+        else{
+            return res.redirect('back');
+        }
+    });
+    });
+};

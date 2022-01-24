@@ -3,8 +3,9 @@
     <h1>Satyam's social site/ <%= title %></h1>
 
     <section id="feed-posts">
-       <h3>Posts</h3>
+      
        <% if(locals.user){ %>
+        <h3>Posts</h3>
        <form action="/posts/create" id="new-post-form" method="post">
            <textarea name="content" id="" cols="30" rows="2"></textarea>
            <input type="submit" value="Post">
@@ -16,6 +17,11 @@
             <% for(i of posts) { %>
                 <li>
                     <p>
+                        <% if((locals.user) && (i.user.id == locals.user.id)){ %>
+                        <small>
+                            <a href="/posts/destroy/<%= i._id %>">delete post</a>
+                        </small>
+                        <% } %>
                     <%= i.content %>
                     <br>
                     <small>
@@ -35,7 +41,13 @@
                               <ul id="post-comments-<% i._id %>">
                                   <h4>Comments</h4>
                                   <% for (comment of i.comments){ %>
+                                    
                                     <p>
+                                        <% if((locals.user) && ((locals.user.id == comment.user.id) ||(locals.user.id== i.user.id))){ %>
+                                            <small>
+                                                <a href="/comments/destroy/<%= comment.id %>">delete comment</a>
+                                            </small>
+                                            <% } %>
                                         <%= comment.content %>
                                         <br>
                                         <small>

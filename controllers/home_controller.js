@@ -1,7 +1,8 @@
 const Post = require('../models/post');
+const User = require('../models/user');
 
 
-    module.exports.home= (req, res)=>{
+    module.exports.home= async (req, res)=>{
 
 
     // res.cookie('satyam_raj', 33);
@@ -13,19 +14,23 @@ const Post = require('../models/post');
 
 
     //populate the user of each post
-    Post.find({})
+   try {
+    let posts= await Post.find({})
     .populate('user')
     .populate({
         path: 'comments',
         populate: ({
             path: 'user'
         })
-    })
-    .exec(function(err,posts){
-        // console.log(posts);
-        return res.render('home', {
-                    title: ' Social site Home',
-                    posts: posts
+    });
+    let users= await User.find({});
+    return res.render('home', {
+        title: ' Social site Home',
+        posts: posts,
+        all_users: users
     }); 
-});
-    };
+   } catch (error) {
+       console.log(`error in .home ${error}`);
+       return;
+   }
+}

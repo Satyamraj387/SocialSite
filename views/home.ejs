@@ -12,7 +12,7 @@
        </form> 
        <% } %>
     </section>
-    <div>
+    <div id="posts-list-container">
         <ul>
             <% for(i of posts) { %>
               <%- include('_post') -%>
@@ -29,4 +29,5 @@
 
             <% } %>
     </section>
+    <script src="/js/home_posts.js"></script>
 

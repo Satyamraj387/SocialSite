@@ -13,9 +13,10 @@ const User = require('../models/user');
     // });
 
 
-    //populate the user of each post
+    //populate the user of each post means have the value of all data of user through its id
    try {
     let posts= await Post.find({})
+    .sort('-createdAt')
     .populate('user')
     .populate({
         path: 'comments',
@@ -30,7 +31,7 @@ const User = require('../models/user');
         all_users: users
     }); 
    } catch (error) {
-       console.log(`error in .home ${error}`);
+       console.log(`error in home ${error}`);
        return;
    }
 }

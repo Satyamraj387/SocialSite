@@ -28,14 +28,24 @@ const User = require('../models/user');
             path: 'likes'
         }
     }).populate('likes');
-    let users= await User.find({});
+
+    let users= await User.find({}).populate('friendship');
+    // .populate({
+    //     path: 'friendship',
+    //     populate: {
+    //         path: 'to_user'
+    //     },
+    //     populate: {
+    //     path: 'from_user'
+    // }});
+
     return res.render('home', {
         title: ' Social site Home',
         posts: posts,
         all_users: users
     }); 
    } catch (error) {
-       console.log(`error in home ${error}`);
+       console.log(`error in home controller ${error}`);
        return;
    }
 }

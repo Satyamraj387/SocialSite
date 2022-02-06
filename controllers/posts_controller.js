@@ -10,15 +10,15 @@ module.exports.create =async  (req,res)=>{
                 content: req.body.content,
                 user: req.user._id
             });
-            if(req.xhr){
+            // if(req.xhr){
                 return res.status(200).json({
                     data: { 
                         post: post
                     },
                     message: "Post created"
                 }); 
-            }
-                return res.redirect('back');
+            // }
+            //     return res.redirect('back');
         } catch (error) {
             console.log('error in creating a post'); 
             return;

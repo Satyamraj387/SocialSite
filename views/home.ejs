@@ -11,7 +11,7 @@
            <input type="submit" value="Post">
        </form> 
        <% } %>
-    </section>
+   
     <div id="posts-list-container">
         <ul>
             <% for(i of posts) { %>
@@ -20,15 +20,53 @@
                 <% } %>
         </ul>
     </div>
+  </section>
+    <div id="users-list-container">
 
-    <section id="user-friends">
-        <h4>user-friends</h4>
-        <% for(u of all_users){ %>
-            <p>
+        <!-- <section id="user-friends">
+           <h4>user-friends</h4>
+            <% for(u of all_users){ %>
+              <p>
                 <a href="users/profile/<%= u.id %>"><%= u.name %></a>
-            </p>
+              </p>
 
             <% } %>
-    </section>
-    <script src="/js/home_posts.js"></script>
+         </section> -->
 
+         <section id="all-users" >
+             <h4>All users of social site </h4>
+             <% for(u of all_users){ %>
+                <p>
+                  <a href="users/profile/<%= u.id %>"><%= u.name %></a>
+                 <% if(locals.user){ %>
+
+                    <% let yaar = false; %>
+                    <% for(i of u.friendship){ %>
+                      <% var a= (id)=>{ return id=i; } %>
+                       <% if(locals.user.friendship.find(a)!=null){ %>
+                         <%  yaar=true; %>
+                         <% break; %>
+                      <%  } %>
+                    <% } %>
+
+                    <% if(!yaar){ %>
+                       <a href="friendship/add-friend/<%= u.id %>"> Add friend</a>
+                    <% }else{ %>
+                      ticked
+                    <% } %>
+             
+                </p>
+                <% } %>
+              <% } %>
+         </section>
+
+         <%- include('_chat_box') -%>
+    </div>
+    <script src="/js/home_posts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+    <script src="/js/chat_engine.js"></script>
+    <% if(locals.user){ %>
+    <script>
+      new ChatEngine('user-chat-box', '<%= locals.user.email %>');
+    </script>
+    <% } %>

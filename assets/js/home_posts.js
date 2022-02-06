@@ -15,7 +15,8 @@
                    $('#posts-list-container>ul').prepend(newPost);
                    //newPost object has .delete-post-button class inside it here delete post button has been given to the deletePost
                     deletePost($(' .delete-post-button', newPost));
-                }, error: (error)=>{
+                }, 
+                error: (error)=>{
                     console.log(error.responseText);
                 }
             });

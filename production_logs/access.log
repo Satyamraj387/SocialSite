@@ -133,3 +133,88 @@
 ::1 - - [07/Feb/2022:11:24:37 +0000] "GET /users/sign-in HTTP/1.1" 304 - "http://localhost:8000/users/sign-in" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36"
 ::1 - - [07/Feb/2022:11:24:40 +0000] "GET /users/auth/google HTTP/1.1" 302 0 "http://localhost:8000/users/sign-in" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36"
 ::1 - - [07/Feb/2022:11:26:03 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36"
+::1 - - [07/Feb/2022:15:18:15 +0000] "GET / HTTP/1.1" 200 3302 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36"
+::1 - - [07/Feb/2022:15:18:18 +0000] "GET /users/sign-in HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36"
+::1 - - [07/Feb/2022:15:18:24 +0000] "POST /users/create-session HTTP/1.1" 302 72 "http://localhost:8000/users/sign-in" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36"
+::1 - - [07/Feb/2022:15:18:24 +0000] "GET /users/sign-in HTTP/1.1" 304 - "http://localhost:8000/users/sign-in" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36"
+::1 - - [07/Feb/2022:15:18:28 +0000] "GET /users/auth/google HTTP/1.1" 302 0 "http://localhost:8000/users/sign-in" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36"
+::1 - - [07/Feb/2022:15:18:29 +0000] "GET /users/auth/google/callback?code=4%2F0AX4XfWihiY6iRyuwcoq50oA3xrKG9qRpNggoaf7rXcUzJ9MsIhOe-WvCweAYsl9eYQPK_A&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=0&prompt=none HTTP/1.1" 302 46 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36"
+::1 - - [07/Feb/2022:15:18:29 +0000] "GET / HTTP/1.1" 200 5889 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36"
+::1 - - [07/Feb/2022:15:18:36 +0000] "GET /comments/destroy/6200ff9211f7787df90bf89c HTTP/1.1" 302 88 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36"
+::1 - - [07/Feb/2022:15:18:36 +0000] "GET / HTTP/1.1" 200 5036 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36"
+::1 - - [07/Feb/2022:15:18:37 +0000] "GET /likes/toggle/?id=6200fef14388d652f0f2e3c3&type=Comment HTTP/1.1" 302 46 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36"
+::1 - - [07/Feb/2022:15:18:37 +0000] "GET / HTTP/1.1" 200 5036 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36"
+::1 - - [07/Feb/2022:15:18:40 +0000] "GET /comments/destroy/6200fef14388d652f0f2e3c3 HTTP/1.1" 302 88 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36"
+::1 - - [07/Feb/2022:15:18:40 +0000] "GET / HTTP/1.1" 200 4458 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36"
+::1 - - [07/Feb/2022:15:18:51 +0000] "GET /friendship/add-friend/62001836ffd78cfc64aa6cbd HTTP/1.1" - - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36"
+::1 - - [07/Feb/2022:15:18:51 +0000] "GET /users/sign-out HTTP/1.1" 302 46 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36"
+::1 - - [07/Feb/2022:15:18:51 +0000] "GET / HTTP/1.1" 200 3015 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36"
+[0mGET /users/auth/google/callback?code=4%2F0AX4XfWijwLi8H4ji20KrUPdnFxU3B334Z3LNbwsxiuPHZo2LcRaiihg7GlI4uUVGGPREtA&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=0&prompt=none [0m-[0m - ms - -[0m
+[0mGET /users/auth/google/callback?code=4%2F0AX4XfWijwLi8H4ji20KrUPdnFxU3B334Z3LNbwsxiuPHZo2LcRaiihg7GlI4uUVGGPREtA&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=0&prompt=none [31m500[0m 750.252 ms - 1104[0m
+[0mGET / [32m200[0m 302.563 ms - 3470[0m
+[0mGET /users/sign-in [32m200[0m 17.350 ms - 1430[0m
+[0mGET /users/css/header.css [33m404[0m 27.871 ms - 159[0m
+[0mGET /users/css/layout.css [33m404[0m 15.220 ms - 159[0m
+[0mGET /users/css/footer.css [33m404[0m 27.342 ms - 159[0m
+[0mGET /users/auth/google [36m302[0m 10.007 ms - 0[0m
+[0mGET /users/auth/google/callback?code=4%2F0AX4XfWgNIOlg7O7jwazpgLwTscbjC2vfaBY4VYSPCB7782nmnXzj9GOlZGBP1a2JxiboyQ&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=0&prompt=none [36m302[0m 2254.974 ms - 46[0m
+[0mGET / [32m200[0m 72.654 ms - 6357[0m
+::1 - - [07/Feb/2022:18:25:56 +0000] "GET / HTTP/1.1" 200 2738 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36"
+::1 - - [07/Feb/2022:18:25:59 +0000] "GET /users/sign-in HTTP/1.1" 200 1466 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36"
+::1 - - [07/Feb/2022:18:26:01 +0000] "GET /users/auth/google HTTP/1.1" 302 0 "http://localhost:8000/users/sign-in" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36"
+::1 - - [07/Feb/2022:18:26:03 +0000] "GET /users/auth/google/callback?code=4%2F0AX4XfWjLiXCgHvV3m27553Dn6I2pE8kK7OO4e7y1fVl-NrWyqRv8NZoIMyWUKwM13efG_A&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=0&prompt=none HTTP/1.1" 302 46 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36"
+::1 - - [07/Feb/2022:18:26:03 +0000] "GET / HTTP/1.1" 200 4733 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36"
+[0mGET / [32m200[0m 514.203 ms - 3470[0m
+[0mGET /favicon.ico [33m404[0m 4.746 ms - 150[0m
+[0mGET /users/sign-in [32m200[0m 7.000 ms - 1430[0m
+[0mGET /users/css/footer.css [33m404[0m 7.114 ms - 159[0m
+[0mGET /users/css/header.css [33m404[0m 7.303 ms - 159[0m
+[0mGET /users/css/layout.css [33m404[0m 4.076 ms - 159[0m
+[0mPOST /users/create-session [36m302[0m 27.228 ms - 46[0m
+[0mGET / [32m200[0m 15.717 ms - 6046[0m
+[0mPOST /posts/create [32m200[0m 21.651 ms - 238[0m
+[0mPOST /comments/create [36m302[0m 14.788 ms - 46[0m
+[0mGET / [32m200[0m 36.821 ms - 7350[0m
+[0mPOST /comments/create [36m302[0m 12.899 ms - 46[0m
+[0mGET / [32m200[0m 28.122 ms - 7928[0m
+[0mGET /users/sign-out [36m302[0m 4.924 ms - 46[0m
+[0mGET / [32m200[0m 11.420 ms - 4851[0m
+[0mGET /users/sign-in [36m304[0m 4.210 ms - -[0m
+[0mGET /users/css/layout.css [33m404[0m 2.222 ms - 159[0m
+[0mGET /users/css/header.css [33m404[0m 2.339 ms - 159[0m
+[0mGET /users/css/footer.css [33m404[0m 2.794 ms - 159[0m
+[0mGET /users/sign-in [36m304[0m 4.498 ms - -[0m
+[0mGET /users/css/footer.css [33m404[0m 5.483 ms - 159[0m
+[0mGET /users/css/layout.css [33m404[0m 15.481 ms - 159[0m
+[0mGET /users/css/header.css [33m404[0m 14.946 ms - 159[0m
+[0mGET /users/auth/google [36m302[0m 4.726 ms - 0[0m
+[0mGET /users/css/layout.css [33m404[0m 3.521 ms - 159[0m
+[0mGET /users/css/header.css [33m404[0m 3.459 ms - 159[0m
+[0mGET /users/css/footer.css [33m404[0m 4.861 ms - 159[0m
+[0mGET /users/css/layout.css [33m404[0m 2.471 ms - 159[0m
+[0mGET /users/css/header.css [33m404[0m 2.260 ms - 159[0m
+[0mGET /users/css/footer.css [33m404[0m 3.870 ms - 159[0m
+[0mGET /favicon.ico [33m404[0m 2.187 ms - 150[0m
+[0mGET /users/auth/google [36m302[0m 2.965 ms - 0[0m
+[0mPOST /users/create-session [36m302[0m 3.930 ms - 46[0m
+[0mGET / [32m200[0m 13.909 ms - 8203[0m
+[0mPOST /comments/create [36m302[0m 11.782 ms - 46[0m
+[0mGET / [32m200[0m 29.277 ms - 8505[0m
+[0mGET /favicon.ico [33m404[0m 7.574 ms - 150[0m
+[0mPOST /comments/create [36m302[0m 9.554 ms - 46[0m
+[0mGET / [32m200[0m 34.494 ms - 9082[0m
+[0mPOST /comments/create [36m302[0m 18.950 ms - 46[0m
+[0mGET / [32m200[0m 26.752 ms - 9659[0m
+[0mPOST /comments/create [36m302[0m 11.597 ms - 46[0m
+[0mGET / [32m200[0m 27.477 ms - 10236[0m
+[0mGET /users/sign-out [36m302[0m 4.414 ms - 46[0m
+[0mGET / [32m200[0m 14.315 ms - 5975[0m
+[0mGET /users/sign-in [36m304[0m 4.266 ms - -[0m
+[0mGET /users/css/layout.css [33m404[0m 1.791 ms - 159[0m
+[0mGET /users/css/header.css [33m404[0m 2.331 ms - 159[0m
+[0mGET /users/css/footer.css [33m404[0m 3.308 ms - 159[0m
+[0mGET /users/auth/google [36m302[0m 1.713 ms - 0[0m
+[0mGET /users/auth/google/callback?code=4%2F0AX4XfWjS1mjvrEUbwh6rcNWUbQC3JeywiiCGI5uyd0fFOqJWkOnnfBLVi5-Mhh762qC01w&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=none [36m302[0m 1930.929 ms - 46[0m
+[0mGET / [32m200[0m 21.724 ms - 10087[0m
+[0mGET /users/sign-out [36m302[0m 4.903 ms - 46[0m
+[0mGET / [32m200[0m 16.889 ms - 5975[0m

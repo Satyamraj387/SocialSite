@@ -21,15 +21,15 @@ const development = {
         port: 587,
        secure: false,
        auth: {
-        user: 'socialsitemaiiler',
-        pass: 'RPhr4XUr4O'
+        user: process.env.SOCIALSITE_GMAIL_USERNAME,
+        pass: process.env.SOCIALSITE_GMAIL_PASSWORD
        }  
     },
-    google_clientID: '1087829416690-7et1u3vgat55ivl9o7lck4tgeo1hh5s5.apps.googleusercontent.com',
-    googgle_clientSecret: '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',
-    google_callbackURL: 'http://localhost:8000/users/auth/google/callback',
+    google_clientID: process.env.SOCIALSITE_GOOGLE_CLIENT_ID,
+    googgle_clientSecret: process.env.SOCIALSITE_GOOGLE_CLIENT_SECRET,
+    google_callbackURL: process.env.SOCIALSITE_GOOGLE_CALLBACK_URL,
 
-    jwt_secret: 'satya',
+    jwt_secret: process.env.SOCIALSITE_JWT_SECRET,
     morgan: {
         mode: 'dev',
         options:{stream: accessLogStream} 

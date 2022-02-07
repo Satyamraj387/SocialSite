@@ -22,7 +22,7 @@ const development = {
        secure: false,
        auth: {
         user: 'socialsitemaiiler',
-        pass: 'Abc@1234'
+        pass: 'RPhr4XUr4O'
        }  
     },
     google_clientID: '1087829416690-7et1u3vgat55ivl9o7lck4tgeo1hh5s5.apps.googleusercontent.com',
@@ -63,4 +63,4 @@ const production = {
     }
 }
 
-module.exports = eval(process.env.SOCIALSITE_ENVIRONMENT)== undefined ?  development : eval(process.env.SOCIALSITE_ENVIRONMENT);
+module.exports = eval(process.env.NODE_ENV)== undefined ?  development : eval(process.env.SOCIALSITE_ENVIRONMENT);

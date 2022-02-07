@@ -13,7 +13,7 @@ const accessLogStream = rfs.createStream('access.log', {
 const development = {
     name: 'development',
     asset_path: './assets',
-    session_cookie_key: 'blahsomething',
+    session_cookie_key: process.env.SOCIALSITE_SESSION_COOKIE_KEY,
     db: 'SocialSite_development',
     smtp:{ 
         service: 'gmail',

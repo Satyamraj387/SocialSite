@@ -218,3 +218,8 @@
 [0mGET / [32m200[0m 21.724 ms - 10087[0m
 [0mGET /users/sign-out [36m302[0m 4.903 ms - 46[0m
 [0mGET / [32m200[0m 16.889 ms - 5975[0m
+[0mGET / [31m500[0m 2.386 ms - 1332[0m
+[0mGET / [31m500[0m 1.829 ms - 1332[0m
+[0mGET / [32m200[0m 248.852 ms - 5698[0m
+[0mGET /favicon.ico [33m404[0m 12.270 ms - 150[0m
+::1 - - [08/Feb/2022:10:32:30 +0000] "GET / HTTP/1.1" 200 2738 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36"

@@ -7,7 +7,7 @@ class ChatEngine{
   //io is global variable provided to us when we included cdn file for socket in homejs
   //this line says go and connect on the given port
   //here we have fired a connection which is names as connection for backend or server side
-        this.socket = io.connect('http://localhost:5000');
+        this.socket = io.connect('http://3.208.31.30:5000');
 
         if(this.userEmail){
             this.connectionHandler();
